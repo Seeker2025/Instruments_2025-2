@@ -13,7 +13,7 @@ import {
 import { findProduct } from './helpers/findProduct';
 
 
-const search = document.querySelector('.js-search');
+// const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 
 
@@ -25,7 +25,7 @@ const list = document.querySelector('.js-list');
 
 
 
-console.log(search);
+// console.log(search);
 
 
 
