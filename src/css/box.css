@@ -1,0 +1,77 @@
+ul.list{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+
+    background-color: rgb(99, 99, 141);
+    padding: 15px;
+}
+
+li.card{
+   
+    padding: 18px;
+    margin: 12px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgb(188, 188, 188);
+    
+}
+
+li.card h2{
+    color: rgb(99, 99, 99);
+}
+button{
+    padding: 10px 13px;
+    background-color: rgb(15, 128, 220);
+    color: #fff;
+    font-size: 0.8em;
+    border: 0px;
+    border-radius: 4px;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: var(--tran-dur);
+    transition-timing-function: var(--tran-t-fun) ;
+
+}
+button:hover, button:focus {
+    background-color: rgb(22, 149, 253);
+    box-shadow: rgb(22, 149, 253) 0px 0px 1px 1px;
+    outline: none;
+}
+
+
+
+ul.favorite_list{
+    background-color: rgb(22, 22, 101);
+}
+
+ul.ul_list{
+   
+    display: flex;
+    flex-direction: row;
+    padding-left: -15px;
+    background-color: rgb(211, 211, 210);
+    padding: 15px 0;
+}
+
+ul.ul_list li{
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+ul.ul_list li:first-child{
+    padding-left: 0px;
+    color: rgb(0, 138, 251);
+    
+}
+
+.info{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.red{
+    background-color: rgb(155, 155, 155);
+    color: rgb(207, 207, 207);
+}

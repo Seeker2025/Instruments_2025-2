@@ -1,0 +1,24 @@
+div.modal{
+    width: 380px;
+    padding: 25px;
+    background-color: silver;
+    border-radius: 7px;
+
+    /* position: absolute; */
+}
+
+.cross{
+    cursor: pointer;
+    position: relative;
+    top: -14px;
+    left: 363px;
+    /* border: 1px solid red; */
+    width: 25px;
+    height: 25px;
+
+}
+div.modal p{
+    color: maroon;
+    line-height: 26px;
+    margin-bottom: 13px;
+}
