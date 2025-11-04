@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Instruments_2025-2/",
+    "build": "vite build --base=/Instruments_2025-2.git/",
     "preview": "vite preview"
   },
   "devDependencies": {
