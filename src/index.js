@@ -16,25 +16,11 @@ import { findProduct } from './helpers/findProduct';
 // const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 
-
-
-// const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
-// console.log( favoriteArr);
-// const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-// console.log( basketArr);
-
-
-
-// console.log(search);
-
-
-
-
 list.addEventListener('click', onClick);
 
 function onClick(evt){
-    evt.preventDefault();
-    console.log(evt.target);
+    // evt.preventDefault();
+    // console.log(evt.target);
     if(evt.target.classList.contains('js-info')){
        
         const product = findProduct(evt.target, instruments);
@@ -44,7 +30,7 @@ function onClick(evt){
        
     }
     if(evt.target.classList.contains('js-favorite')){
-        console.log(evt.target);
+        // console.log(evt.target);
         toFavorite(evt.target)
         // console.log(evt.target);
         // const product = findProduct(evt.target);

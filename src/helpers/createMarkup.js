@@ -7,7 +7,7 @@ function createMarkup(arr, list){
         markup =  arr.map(({id, img, name})=>`
                     <li data-id=${id} class="card js-card">
                     <img src="${img}" alt="${name}" width="300">
-                    <h2>${name}</h2>
+                    <h2>${name} id${id}</h2>
                     <p><a href="#" class="info js-info">More Information</a></p>
                     <div>
                     <button class="js-favorite" type="button">Add to favorite</button>

@@ -3,24 +3,36 @@ const{ KEY_FAVORITE, KEY_BASKET }=common;
 import { instruments } from '../instruments';
 import { findProduct } from './findProduct';
 
-const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
-console.log( favoriteArr);
+let favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+// let favoriteArr = [];
+// let newfavorite = [];
+// console.log( favoriteArr);
 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-console.log( basketArr);
+// console.log( basketArr);
 
 function toFavorite(elemFuv){
  console.log(elemFuv);
-        const product = findProduct(elemFuv, instruments);
-        console.log(product);
-        const inStorage = favoriteArr.some(({ id })=> id === product.id)
+                const product = findProduct(elemFuv, instruments);
+                console.log(product);
+                console.log(favoriteArr);
+                const inStorage = favoriteArr.some(({ id })=> id === product.id);
+                console.log(inStorage);
         if(inStorage){
-            return
-        }
-        console.log(product);
-        console.log(favoriteArr);
-        favoriteArr.push(product);
-        console.log(favoriteArr);
-        localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+            
+                console.log(favoriteArr);
+                favoriteArr = favoriteArr.filter((itm)=>itm.id!==product.id);
+                console.log('Hir');
+                console.log(favoriteArr);
+                localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+            
+           }else{
+                favoriteArr.push(product);
+                console.log(favoriteArr);
+                localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+
+           }
+      
+       
     }
 
 

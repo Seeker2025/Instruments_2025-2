@@ -32,7 +32,7 @@ function createModal({img, name, price, description, id}){
                  <img src=${closeIcon} alt="close">
             </div>
             <img src="${img}" alt="${name}" width="300">
-            <h2>${name}</h2>
+            <h2>${name} id${id}</h2>
             <h3>${price}point</h3>
             <p>${description}</p>
               <div>
