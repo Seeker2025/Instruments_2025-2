@@ -75,3 +75,6 @@ ul.ul_list li:first-child{
     background-color: rgb(155, 155, 155);
     color: rgb(207, 207, 207);
 }
+li.card h2 span{
+    color: maroon;
+}

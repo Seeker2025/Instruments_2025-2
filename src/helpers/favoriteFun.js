@@ -9,6 +9,8 @@ let favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 // console.log( favoriteArr);
 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 // console.log( basketArr);
+// .js-favorite
+// const favoriteBtn = document.querySelector('.js-favorite');
 
 function toFavorite(elemFuv){
  console.log(elemFuv);
@@ -17,18 +19,22 @@ function toFavorite(elemFuv){
                 console.log(favoriteArr);
                 const inStorage = favoriteArr.some(({ id })=> id === product.id);
                 console.log(inStorage);
+                // console.log(favoriteBtn);
         if(inStorage){
             
                 console.log(favoriteArr);
                 favoriteArr = favoriteArr.filter((itm)=>itm.id!==product.id);
-                console.log('Hir');
+                console.log('Hi');
                 console.log(favoriteArr);
                 localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+                elemFuv.textContent = 'Add to favorite';
+                console.log(elemFuv.textContent);
             
            }else{
                 favoriteArr.push(product);
                 console.log(favoriteArr);
                 localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+                elemFuv.textContent = 'Remove from';
 
            }
       

@@ -1,13 +1,14 @@
 ul.checkout_list{
-    background-color: rgb(119, 144, 11);
+    background-color: rgb(75, 89, 11);
 }
 ul.ul_list{
    
     display: flex;
     flex-direction: row;
-    padding-left: -15px;
+    /* padding-left: -15px; */
     background-color: rgb(211, 211, 210);
     padding: 15px 0;
+    border-bottom: 4px solid rgb(0, 166, 255);
 }
 ul.ul_list li{
     padding-left: 15px;

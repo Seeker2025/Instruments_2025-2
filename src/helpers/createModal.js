@@ -32,14 +32,14 @@ function createModal({img, name, price, description, id}){
                  <img src=${closeIcon} alt="close">
             </div>
             <img src="${img}" alt="${name}" width="300">
-            <h2>${name} id${id}</h2>
+            <h2>${name} <span>id${id}</span></h2>
             <h3>${price}point</h3>
             <p>${description}</p>
               <div>
                   <button class="js-favorite" type="button">Add to favorite</button>
                   <button class="js-basket" type="button">Add to basket</button>
               </div>
-        </div>
+      </div>
 `, {
     handler: null,
     onShow(instance){
