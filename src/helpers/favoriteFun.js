@@ -28,13 +28,16 @@ function toFavorite(elemFuv){
                 console.log(favoriteArr);
                 localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
                 elemFuv.textContent = 'Add to favorite';
-                console.log(elemFuv.textContent);
+                let text = 'Add to favorite';
+                return text;
             
            }else{
                 favoriteArr.push(product);
                 console.log(favoriteArr);
                 localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
                 elemFuv.textContent = 'Remove from';
+                let text = 'Remove from';
+                return text;
 
            }
       

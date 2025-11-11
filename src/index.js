@@ -16,6 +16,8 @@ import { findProduct } from './helpers/findProduct';
 // const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 
+createMarkup(instruments, list);
+
 list.addEventListener('click', onClick);
 
 function onClick(evt){
@@ -26,43 +28,27 @@ function onClick(evt){
         const product = findProduct(evt.target, instruments);
         console.log(product);
         const{img, name, price, description, id}=product
-       createModal({img, name, price, description, id})
+        createModal({img, name, price, description, id})
        
     }
     if(evt.target.classList.contains('js-favorite')){
-        // console.log(evt.target);
-        toFavorite(evt.target)
-        // console.log(evt.target);
-        // const product = findProduct(evt.target);
-        // const inStorage = favoriteArr.some(({ id })=> id === product.id)
-        // if(inStorage){
-        //     return
-        // }
-        // console.log(product);
-        // console.log(favoriteArr);
-        // favoriteArr.push(product);
-        // console.log(favoriteArr);
-        // localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+        
+            let textOnBtn = toFavorite(evt.target)
+            // console.log('nooo', toFavorite(evt.target));
+            console.log(textOnBtn);
+            
+              
     }
 
 
     if(evt.target.classList.contains('js-basket')){
-        toBusket(evt.target);
-        // const product = findProduct(evt.target);
-        // const inStorage = basketArr.some(({ id })=> id === product.id)
-        // if(inStorage){
-        //     return
-        // }
-        // console.log(product);
-        // basketArr.push(product);
-        // console.log(basketArr);
-        // localStorage.setItem(KEY_BASKET, JSON.stringify(basketArr));
+        
+            toBusket(evt.target);
     }
-    
-
+ 
 }
 
-createMarkup(instruments, list);
+
 
 // function findProduct(elem){
 //     const productId = Number(elem.closest('.js-card').dataset.id)

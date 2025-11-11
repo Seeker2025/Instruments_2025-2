@@ -31,7 +31,7 @@ function onClick(evt){
        createModal({img, name, price, description});
        const modal = document.querySelector('.modal');
        console.log(modal);
-       buttonDis('.js-favorite', modal);
+      //  buttonDis('.js-favorite', modal);
        
     }
       if(evt.target.classList.contains('js-basket')){
