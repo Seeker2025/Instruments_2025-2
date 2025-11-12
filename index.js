@@ -1,2 +1,0 @@
-import{c as l,f as d,a as f,t as g,b as u,i as a}from"./assets/createModal-CzaiQB0S.js";import"./assets/vendor-DaP2veRQ.js";const i=document.querySelector(".js-list");l(a,i);i.addEventListener("click",m);function m(t){if(t.target.classList.contains("js-info")){const s=d(t.target,a);console.log(s);const{img:o,name:n,price:c,description:e,id:r}=s;f({img:o,name:n,price:c,description:e,id:r})}if(t.target.classList.contains("js-favorite")){let s=g(t.target);console.log(s)}t.target.classList.contains("js-basket")&&u(t.target)}
-//# sourceMappingURL=index.js.map
