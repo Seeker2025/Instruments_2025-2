@@ -13,7 +13,7 @@ console.log(list);
 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 console.log( basketArr);
 
-createMarkup(basketArr, list);
+createMarkup( basketArr, list );
 // const btnBasket = list.querySelectorAll('.js-basket');
 //     console.log(btnBasket);
 //     btnBasket.forEach((itm)=>{
@@ -56,9 +56,3 @@ function onClick(evt){
     
 }
 
-// function findProduct(elem){
-//     const productId = Number(elem.closest('.js-card').dataset.id)
-//     return basketArr.find(({id}) => id === productId);
-// // }
-// buttonDis('.js-basket');
-//

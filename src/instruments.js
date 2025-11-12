@@ -18,6 +18,7 @@ const instruments = [
   name: "Шуруповерт",
   price: 1500,
   description: "Мережевий дриль-шуруповерт ТD-30-Надійний помічник для робіт по дому"
+  
      },
      {
   id: 2,
@@ -25,6 +26,7 @@ const instruments = [
   name: "Перфоратор",
   price: 3948,
   description: "Перфоратор бочковий Dnipro-M BH-20 Використовується для сверління"
+  
     },
 
       {
@@ -33,6 +35,7 @@ const instruments = [
  name: "Шліфмашина",
  price: 1299,
  description: "Кутова шліфмашина Dnipro-M GS-98 - модель яка поєднує в собі"
+ 
    },
     {
  id: 4,
@@ -40,6 +43,7 @@ const instruments = [
  name: "Пила",
  price: 11049,
  description: "Мобільна акумуляторна ланцюгова пила DCS-200BC DUAL"
+ 
    }, 
    {
  id: 5,
@@ -47,6 +51,7 @@ const instruments = [
  name: "Рівень",
  price: 897,
  description: "Рівень серії ProVision виробництва DNIPRO-M"
+ 
     },
   
     {
@@ -55,6 +60,7 @@ const instruments = [
  name: "Тример",
  price: 3699,
  description: "Тример електричний Dnipro-M 110 призначений для покосу трави"
+ 
     },
      
     {
@@ -63,6 +69,7 @@ const instruments = [
  name: "Мотокоса",
  price: 11049,
  description: "Мотокоса Dnipro-M 43 призначений для покосу трави, чагарників, бур'янів"
+ 
     },
 
     {
@@ -71,6 +78,7 @@ const instruments = [
  name: "Генератор",
  price: 10890,
  description: "Бензиновый генератор Dnipro-M GX-25 номінальною потужністю 2,5 кВт"
+ 
     },  
 
     {
@@ -79,6 +87,7 @@ const instruments = [
  name: "Культиватор",
  price: 10890,
  description: "Культиватор електричний Dnipro-M 40"
+ 
     },  
 
     {
@@ -87,5 +96,6 @@ const instruments = [
  name: "Лобзик",
  price: 10890,
  description: "Лобзик електричний Dnipro-M JS-80LX + Набір пиляльних полотен 5 шт"
+ 
     },  
 ];

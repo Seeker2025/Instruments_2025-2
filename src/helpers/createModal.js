@@ -43,7 +43,7 @@ function createModal({img, name, price, description, id}){
 `, {
     handler: null,
     onShow(instance){
-      console.log(this);
+      // console.log(this);
       this.handler = closeMadal.bind(instance);
     document.addEventListener('keydown', this.handler);
 
@@ -81,7 +81,7 @@ instance.show();
  modal.addEventListener('click', onClick);
  function onClick(evt){
  if(evt.target.classList.contains('js-favorite')){
-    console.log('Hi', evt.target);
+    
     toFavorite(evt.target);
  }
 

@@ -1,4 +1,4 @@
-console.log('fav');
+// console.log('favorite');
 import { common } from './common';
 const{ KEY_FAVORITE, KEY_BASKET }=common;
 import { createMarkup } from './helpers/createMarkup';
@@ -9,7 +9,7 @@ import {buttonDis} from './helpers/buttonDis'
 
 
 const list = document.querySelector('.js-list');
-console.log(list);
+// console.log(list);
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 console.log(favorite);
 
@@ -28,7 +28,7 @@ function onClick(evt){
         const product = findProduct(evt.target, favorite);
         console.log(product);
         const{img, name, price, description}=product
-       createModal({img, name, price, description});
+       createModal({img, name, price, description, id});
        const modal = document.querySelector('.modal');
        console.log(modal);
       //  buttonDis('.js-favorite', modal);
@@ -38,8 +38,3 @@ function onClick(evt){
         toBusket(evt.target);
 }
 }
-
-// function findProduct(elem){
-//     const productId = Number(elem.closest('.js-card').dataset.id)
-//     return favorite.find(({id}) => id === productId);
-// }
