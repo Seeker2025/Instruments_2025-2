@@ -1,8 +1,8 @@
 
 import { instruments } from './instruments';
-// import { common } from './common';
+import { common } from './common';
 
-// const{ KEY_FAVORITE, KEY_BASKET }=common;
+const{ KEY_FAVORITE, KEY_BASKET, KEY_INSTRUMENT }=common;
 import { createMarkup } from './helpers/createMarkup';
 import { createModal } from './helpers/createModal';
 import { 
@@ -16,7 +16,12 @@ import { findProduct } from './helpers/findProduct';
 // const search = document.querySelector('.js-search');
 const list = document.querySelector('.js-list');
 
-createMarkup(instruments, list);
+localStorage.setItem(KEY_INSTRUMENT, JSON.stringify(instruments));
+const allInstruments = JSON.parse(localStorage.getItem(KEY_INSTRUMENT));
+export { allInstruments };
+console.log(allInstruments);
+createMarkup(allInstruments, list);
+
 
 list.addEventListener('click', onClick);
 
@@ -33,10 +38,9 @@ function onClick(evt){
     }
     if(evt.target.classList.contains('js-favorite')){
         
-            let textOnBtn = toFavorite(evt.target)
-            // console.log('nooo', toFavorite(evt.target));
-            console.log(textOnBtn);
+            toFavorite(evt.target)
             
+                         
               
     }
 

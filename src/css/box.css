@@ -78,3 +78,10 @@ ul.ul_list li:first-child{
 li.card h2 span{
     color: maroon;
 }
+
+.red:hover, .red:focus{
+    background-color:  rgb(155, 155, 155);
+    box-shadow: inherit;
+    outline: inherit;
+
+}
