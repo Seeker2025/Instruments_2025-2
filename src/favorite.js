@@ -14,7 +14,7 @@ import {  buttonDis   } from './helpers/buttonDis'
 const favList = document.querySelector('.favorite_list');
 // console.log(list);
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
-// console.log(favorite);
+
 
 createMarkup(favorite, favList);
 
