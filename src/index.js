@@ -40,14 +40,14 @@ function onClick(evt){
         
             toFavorite(evt.target)
             
-                         
-              
     }
 
 
     if(evt.target.classList.contains('js-basket')){
         
             toBusket(evt.target);
+
+            
     }
  
 }

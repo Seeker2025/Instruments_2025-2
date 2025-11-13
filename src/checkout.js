@@ -8,12 +8,12 @@ import { findProduct } from './helpers/findProduct';
 import { toFavorite } from './helpers/favoriteFun';
 import {buttonDis} from './helpers/buttonDis'
 
-const list = document.querySelector('.js-list');
-console.log(list);
+const basketList = document.querySelector('.checkout_list');
+// console.log(basketList);
 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 console.log( basketArr);
 
-createMarkup( basketArr, list );
+createMarkup( basketArr, basketList );
 // const btnBasket = list.querySelectorAll('.js-basket');
 //     console.log(btnBasket);
 //     btnBasket.forEach((itm)=>{
@@ -21,38 +21,38 @@ createMarkup( basketArr, list );
 //     })
     // btnBasket.disabled = true;
     // btnBasket.classList.add('red')
-     buttonDis('.js-basket', list);
+    //  buttonDis('.js-basket', list);
 
     
 
-list.addEventListener('click', onClick);
+// list.addEventListener('click', onClick);
 
-function onClick(evt){
-    evt.preventDefault();
-   console.log(evt.target);
+// function onClick(evt){
+//     evt.preventDefault();
+//    console.log(evt.target);
    
    
-    if(evt.target.classList.contains('js-info')){
+//     if(evt.target.classList.contains('js-info')){
           
-           const product = findProduct(evt.target, basketArr);
-           console.log(product);
-           const{img, name, price, description}=product
-          createModal({img, name, price, description})
-        //   const btn = document.querySelector('.js-basketModal');
-        //   console.log(btn);
-        //   buttonDis('.js-basket');
-        // btn.disabled = true;
-    // btn.classList.add('red')
-    const modal = document.querySelector('.modal');
-       console.log(modal);
-       buttonDis('.js-basket', modal);
+//            const product = findProduct(evt.target, basketArr);
+//            console.log(product);
+//            const{img, name, price, description}=product
+//           createModal({img, name, price, description})
+//         //   const btn = document.querySelector('.js-basketModal');
+//         //   console.log(btn);
+//         //   buttonDis('.js-basket');
+//         // btn.disabled = true;
+//     // btn.classList.add('red')
+//     const modal = document.querySelector('.modal');
+//        console.log(modal);
+//        buttonDis('.js-basket', modal);
           
-       }
-    if(evt.target.classList.contains('js-favorite')){
-        console.log(evt.target);
-        toFavorite(evt.target)
-    }
+//        }
+//     if(evt.target.classList.contains('js-favorite')){
+//         console.log(evt.target);
+//         toFavorite(evt.target)
+//     }
    
     
-}
+// }
 
