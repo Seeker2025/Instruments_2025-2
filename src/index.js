@@ -1,16 +1,15 @@
 
-import { instruments } from './instruments';
-import { common } from './common';
+import { instruments    } from './instruments';
+import { common         } from './common';
 
-const{ KEY_FAVORITE, KEY_BASKET, KEY_INSTRUMENT }=common;
-import { createMarkup } from './helpers/createMarkup';
-import { createModal } from './helpers/createModal';
+const{ KEY_FAVORITE, KEY_BASKET, KEY_INSTRUMENT }   =   common;
+import { createMarkup   } from './helpers/createMarkup';
+import { createModal    } from './helpers/createModal';
 import { 
     toFavorite,
     toBusket
-   
-                    } from './helpers/favoriteFun';
-import { findProduct } from './helpers/findProduct';
+                        } from './helpers/favoriteFun';
+import { findProduct    } from './helpers/findProduct';
 
 
 // const search = document.querySelector('.js-search');
@@ -19,7 +18,7 @@ const list = document.querySelector('.js-list');
 localStorage.setItem(KEY_INSTRUMENT, JSON.stringify(instruments));
 const allInstruments = JSON.parse(localStorage.getItem(KEY_INSTRUMENT));
 export { allInstruments };
-console.log(allInstruments);
+// console.log(allInstruments);
 createMarkup(allInstruments, list);
 
 

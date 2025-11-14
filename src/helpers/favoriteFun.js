@@ -19,12 +19,8 @@ function toFavorite(elemFuv){
                 const product = findProduct(elemFuv, allInstruments);
                 const inStorage = favoriteArr.some(({ id })=> id === product.id);
                 console.log(inStorage);
-                allInstruments.map(itm =>{
-                                            if(itm.id === product.id) {
-                                                itm.present ? itm.present = null : itm.present = 'present';
-                                            }      
-                                                 })
-                localStorage.setItem(KEY_INSTRUMENT, JSON.stringify(allInstruments));                                        
+               
+                                                        
         if(inStorage){
             
                 favoriteArr = favoriteArr.filter((itm)=>itm.id!==product.id);
@@ -38,13 +34,17 @@ function toFavorite(elemFuv){
                                              
                 favoriteArr.push(product);
                 console.log(favoriteArr);
-                localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
+                                        allInstruments.map(itm =>{
+                                        if(itm.id === product.id) {
+                                        itm.presentFuv ? itm.presentFuv = null : itm.presentFuv = 'present';
+                                            }      
+                                                 })
+               localStorage.setItem(KEY_INSTRUMENT, JSON.stringify(allInstruments));                                
+               localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
                
 
            }
-      
-       
-    }
+  }
 
 
 

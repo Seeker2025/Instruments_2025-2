@@ -23,8 +23,6 @@ createMarkup( basketArr, basketList );
     // btnBasket.classList.add('red')
     //  buttonDis('.js-basket', list);
 
-    
-
 // list.addEventListener('click', onClick);
 
 // function onClick(evt){

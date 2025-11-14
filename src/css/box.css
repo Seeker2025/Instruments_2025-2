@@ -17,6 +17,12 @@ li.card{
     background-color: rgb(188, 188, 188);
     
 }
+li.card .present{
+    color: rgb(0, 68, 255);
+    font-size: 22px;
+    padding-left: 7px;
+    font-style: italic;
+}
 
 li.card h2{
     color: rgb(99, 99, 99);
@@ -75,8 +81,9 @@ ul.ul_list li:first-child{
     background-color: rgb(155, 155, 155);
     color: rgb(207, 207, 207);
 }
-li.card h2 span{
+li.card span{
     color: maroon;
+    font-weight: bold;
 }
 
 .red:hover, .red:focus{
@@ -84,4 +91,9 @@ li.card h2 span{
     box-shadow: inherit;
     outline: inherit;
 
+}
+
+.textPre{
+    display: flex;
+    flex-direction: row;
 }
