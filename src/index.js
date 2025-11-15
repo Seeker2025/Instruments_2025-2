@@ -13,16 +13,16 @@ import { findProduct    } from './helpers/findProduct';
 
 
 // const search = document.querySelector('.js-search');
-const list = document.querySelector('.js-list');
+const jsList = document.querySelector('.js-list');
 
 localStorage.setItem(KEY_INSTRUMENT, JSON.stringify(instruments));
 const allInstruments = JSON.parse(localStorage.getItem(KEY_INSTRUMENT));
-export { allInstruments };
+
 // console.log(allInstruments);
-createMarkup(allInstruments, list);
+createMarkup(allInstruments, jsList);
 
 
-list.addEventListener('click', onClick);
+jsList.addEventListener('click', onClick);
 
 function onClick(evt){
     // evt.preventDefault();
@@ -37,14 +37,14 @@ function onClick(evt){
     }
     if(evt.target.classList.contains('js-favorite')){
         
-            toFavorite(evt.target)
+            toFavorite(evt.target, allInstruments)
             
     }
 
 
     if(evt.target.classList.contains('js-basket')){
         
-            toBusket(evt.target);
+            toBusket(evt.target, allInstruments);
 
             
     }
@@ -52,8 +52,4 @@ function onClick(evt){
 }
 
 
-
-// function findProduct(elem){
-//     const productId = Number(elem.closest('.js-card').dataset.id)
-//     return instruments.find(({id}) => id === productId);
-// }
+export { allInstruments };
