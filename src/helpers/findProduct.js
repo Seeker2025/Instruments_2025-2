@@ -4,4 +4,4 @@ function findProduct(elem, arr){
 }
 
 
-export {findProduct};
+export { findProduct };

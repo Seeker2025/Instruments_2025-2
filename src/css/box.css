@@ -18,8 +18,15 @@ li.card{
     
 }
 li.card .present{
+    color: rgb(104, 105, 105);
+    font-size: 20px;
+    /* padding-left: 7px; */
+    /* font-style: italic; */
+}
+
+li.card .present span{
     color: rgb(0, 68, 255);
-    font-size: 22px;
+    font-size: 20px;
     padding-left: 7px;
     font-style: italic;
 }
@@ -93,7 +100,7 @@ li.card span{
 
 }
 
-.textPre{
+/* .textPre{
     display: flex;
     flex-direction: row;
-}
+} */

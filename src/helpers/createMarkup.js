@@ -1,28 +1,27 @@
 import noImg from '../img/no_img.png';
 let AddToFav = 'Add to favorite';
 let RemoveFav = 'Remove from';
-let AddToBask = 'Add to basket';
-let RemoveBask = 'Remove from';
-// import { common } from '../common';
-// const{ KEY_FAVORITE, KEY_BASKET }=common;
-// const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE));
-// console.log(favorite);
+let AddToBas = 'Add to basket';
+let RemoveBas = 'Remove from';
+
 
 function createMarkup(arr, list){
-    // console.log(arr.length);
-    let markup;
-    if(arr.length){
-        markup =  arr.map(({id, img, name, presentFuv})=>`
+   
+        let markup;
+        if(arr.length){
+        markup =  arr.map(({id, img, name, presentFuv, presentBas})=>`
                     <li data-id=${id} class="card js-card">
                     <img src="${img}" alt="${name}" width="300">
                     <h2>${name}</h2>
-                    <div class="textPre">
-                    <span>id${id}</span> <p class="present">${presentFuv}</p>
-                    </div>
+                    
+                    <span>id${id}</span>
+                    <p class="present"><b>Favorite</b><span>${presentFuv}</span></p>
+                    <p class="present"><b>Basket</b><span>${presentBas}</span></p>
+                    
                     <p><a href="#" class="info js-info">More Information</a></p>
                     <div>
         <button class="js-favorite" type="button">${presentFuv ? RemoveFav : AddToFav}</button>
-        <button class="js-basket" type="button">${AddToBask}</button>
+        <button class="js-basket" type="button">${presentBas ? RemoveBas : AddToBas}</button>
                     </div>
                     </li>
                     `).join('');
@@ -37,5 +36,3 @@ function createMarkup(arr, list){
 
 export { createMarkup };
 
-// const arr02 = [];
-// console.log(arr02.length);

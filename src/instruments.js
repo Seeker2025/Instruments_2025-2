@@ -1,4 +1,4 @@
-export { instruments };
+
 
 import  in01  from './img/in01.jpg';
 import  in02  from './img/in02.jpg';
@@ -99,3 +99,5 @@ const instruments = [
  
     },  
 ];
+
+export { instruments };
