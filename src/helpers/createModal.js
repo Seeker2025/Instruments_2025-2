@@ -1,30 +1,22 @@
 import * as basicLightbox from 'basiclightbox'
 import "basiclightbox/dist/basicLightbox.min.css";
 
-import { closeMadal } from './closeModal';
-import closeIcon from '../img/close.png';
-// const list = document.querySelector('.js-list');
-import { 
-    toFavorite,
-    toBusket,
-                } from './favoriteFun';
+import { common } from '../common';
+const  { KEY_FAVORITE, KEY_BASKET,  KEY_INSTRUMENT} = common;
+const allInstruments = JSON.parse(localStorage.getItem(KEY_INSTRUMENT));
 
+import {  closeMadal } from './closeModal';
+import { createMarkup } from './createMarkup';
+import    closeIcon from '../img/close.png';
+import { 
+          toFavorite,
+          toBusket,
+                     } from './favoriteFun';
+
+const favList = document.querySelector('.favorite_list');
+const basketList = document.querySelector('.checkout_list');
 
 function createModal({img, name, price, description, id}){
-//   const option = {
-//     handler: null,
-//     onShow(instance){
-//       console.log(this);
-//       this.handler = closeMadal.bind(instance);
-//     document.addEventListener('keydown', closeModal);
-//   },
-//   onClose(){
-//      console.log(this);
-//   },
-  
-// };
-// console.log(id);
-
   
      const instance = basicLightbox.create(`
 	    <div class="modal js-card" data-id=${id}>
@@ -47,8 +39,6 @@ function createModal({img, name, price, description, id}){
       this.handler = closeMadal.bind(instance);
     document.addEventListener('keydown', this.handler);
 
- 
- 
   },
     onClose(){
       console.log(this);
@@ -59,37 +49,38 @@ function createModal({img, name, price, description, id}){
 });
 
 
-// cross.addEventListener('click', toClose);
-// function toClose(){
-//   console.log('whoa!');
-// }
 instance.show();
-// function closeMadal(evt){
-//     if(evt.code === 'Escape'){
-//       instance.close();
-//     }
-  const cross = document.querySelector('.cross');
-    console.log(cross);
-    cross.addEventListener('click', toClose);
-  function toClose(){
-    console.log('whoa!');
-    instance.close();
- }
+
+                    const cross = document.querySelector('.cross');
+                    // console.log(cross);
+                    cross.addEventListener('click', toClose);
+                    function toClose(){
+                    console.log('whoa!');
+                    instance.close();
+                    }
 
  const modal = document.querySelector('.modal');
- console.log(modal);
+//  console.log(modal);
+const favoriteModal = document.querySelector('.modal div button.js-favorite');
+const basketModal =   document.querySelector('.modal div button.js-basket');
+                    console.log(favoriteModal);
+                    console.log(basketModal);
  modal.addEventListener('click', onClick);
- function onClick(evt){
- if(evt.target.classList.contains('js-favorite')){
-    
-    toFavorite(evt.target);
- }
+                                          function onClick(evt){
+                                          console.log(evt.target);
+                                          if(evt.target.classList.contains('js-favorite')){
+                toFavorite(evt.target, allInstruments);
+                const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+                createMarkup(favorite, favList);
+                                            }
 
-  if(evt.target.classList.contains('js-basket')){
-        toBusket(evt.target);
+                                          if(evt.target.classList.contains('js-basket')){
+                toBusket(evt.target, allInstruments);
+                const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
+                createMarkup(basketArr,  basketList);                                  
 
-}
-}
+                                            }
+                                          }
 
 }
 

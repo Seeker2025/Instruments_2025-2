@@ -1,7 +1,7 @@
 // console.log('favorite');
 import { common } from './common';
 const  { KEY_FAVORITE, KEY_BASKET,  KEY_INSTRUMENT} = common;
- import { createMarkup } from './helpers/createMarkup';
+import { createMarkup } from './helpers/createMarkup';
 import { createModal  } from './helpers/createModal';
 import { findProduct  } from './helpers/findProduct';
 
@@ -13,7 +13,7 @@ const favList = document.querySelector('.favorite_list');
  console.log(favList);
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 // const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-console.log(favorite);
+// console.log(favorite);
 
 // import { toFavorite } from './helpers/favoriteFun';
 
@@ -31,12 +31,12 @@ createMarkup(favorite, favList);
      
       if(evt.target.classList.contains('js-info')){
        
-          const product = findProduct(evt.target, favorite);
-          console.log(product);
-          const{ description, id, img, name, present, price  } = product;
-           createModal({description, id, img, name, present, price });
-          const modal = document.querySelector('.modal');
-          console.log(modal);
+               const product = findProduct(evt.target, favorite);
+               console.log(product);
+               const{ description, id, img, name, present, price  } = product;
+               createModal({description, id, img, name, present, price });
+               const modal = document.querySelector('.modal');
+               console.log(modal);
         }
 
    if(evt.target.classList.contains('js-favorite')){
@@ -54,7 +54,7 @@ createMarkup(favorite, favList);
 
                 toBusket(evt.target, allInstruments);
                 const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
-                createMarkup(basketArr, favList);
+               //  createMarkup(basketArr, favList);
 
 
 
