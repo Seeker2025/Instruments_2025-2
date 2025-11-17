@@ -26,3 +26,17 @@ div.modal p{
 .modal h2 span{
     color: maroon;
 }
+
+div.modal ul.container_for_button button.button_fav{
+    height:63px;
+}
+
+div.modal ul.container_for_button li:last-child{
+   
+    padding-left: 9px;
+}
+
+ul.container_for_button{
+    display: flex;
+    flex-direction: row;
+}

@@ -3,7 +3,7 @@ console.log('check');
 import { common } from './common';
 const{ KEY_FAVORITE, KEY_BASKET, KEY_INSTRUMENT } = common;
 import { createMarkup } from './helpers/createMarkup';
-// import { createModal } from './helpers/createModal';
+import { createModal } from './helpers/createModal';
 import { findProduct } from './helpers/findProduct';
 import { toFavorite, toBusket } from './helpers/favoriteFun';
 // import {buttonDis} from './helpers/buttonDis'
@@ -18,35 +18,6 @@ createMarkup( basketArr, basketList );
 
 
 basketList.addEventListener('click', onClick);
-
-// function onClick(evt){
-//     evt.preventDefault();
-//    console.log(evt.target);
-   
-   
-//     if(evt.target.classList.contains('js-info')){
-          
-//            const product = findProduct(evt.target, basketArr);
-//            console.log(product);
-//            const{img, name, price, description}=product
-//           createModal({img, name, price, description})
-//         //   const btn = document.querySelector('.js-basketModal');
-//         //   console.log(btn);
-//         //   buttonDis('.js-basket');
-//         // btn.disabled = true;
-//     // btn.classList.add('red')
-//     const modal = document.querySelector('.modal');
-//        console.log(modal);
-//        buttonDis('.js-basket', modal);
-          
-//        }
-//     if(evt.target.classList.contains('js-favorite')){
-//         console.log(evt.target);
-//         toFavorite(evt.target)
-//     }
-   
-    
-// }
 
 function onClick(evt){
      evt.preventDefault();
