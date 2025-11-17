@@ -1,0 +1,12 @@
+.yes{
+    /* background-color: red; */
+    display: none;
+}
+.no{
+    /* background-color: greenyellow; */
+    display: none;
+
+}
+.vis{
+    display: block;
+}

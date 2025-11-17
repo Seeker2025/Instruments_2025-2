@@ -18,7 +18,7 @@ function createMarkup(arr, list){
                     <p class="present"><b>Favorite</b><span>${presentFuv}</span></p>
                     <p class="present"><b>Basket</b><span>${presentBas}</span></p>
                     
-                    <p><a href="#" class="info js-info">More Information</a></p>
+                    <p><a href="#" class="info js-info">More Information (Modal)</a></p>
                     <div>
         <button class="js-favorite" type="button">${presentFuv ? RemoveFav : AddToFav}</button>
         <button class="js-basket" type="button">${presentBas ? RemoveBas : AddToBas}</button>

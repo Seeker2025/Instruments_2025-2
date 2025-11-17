@@ -10,7 +10,7 @@ import { findProduct  } from './helpers/findProduct';
 const allInstruments = JSON.parse(localStorage.getItem(KEY_INSTRUMENT));
 
 const favList = document.querySelector('.favorite_list');
- console.log(favList);
+
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 // const basketArr = JSON.parse(localStorage.getItem(KEY_BASKET)) ?? [];
 // console.log(favorite);
